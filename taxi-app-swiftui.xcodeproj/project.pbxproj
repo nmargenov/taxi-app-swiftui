@@ -12,6 +12,7 @@
 		207A1FAA2CD80EF000ABD615 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 207A1FA92CD80EF000ABD615 /* Assets.xcassets */; };
 		207A1FAD2CD80EF000ABD615 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 207A1FAC2CD80EF000ABD615 /* Preview Assets.xcassets */; };
 		207A1FBA2CD812B200ABD615 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207A1FB92CD812B200ABD615 /* LocationManager.swift */; };
+		207A1FBC2CD812FB00ABD615 /* MapViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207A1FBB2CD812FB00ABD615 /* MapViewRepresentable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		207A1FA92CD80EF000ABD615 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		207A1FAC2CD80EF000ABD615 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		207A1FB92CD812B200ABD615 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		207A1FBB2CD812FB00ABD615 /* MapViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewRepresentable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				207A1FA72CD80EEF00ABD615 /* ContentView.swift */,
+				207A1FBB2CD812FB00ABD615 /* MapViewRepresentable.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -166,6 +169,7 @@
 			files = (
 				207A1FA82CD80EEF00ABD615 /* ContentView.swift in Sources */,
 				207A1FA62CD80EEF00ABD615 /* taxi_app_swiftuiApp.swift in Sources */,
+				207A1FBC2CD812FB00ABD615 /* MapViewRepresentable.swift in Sources */,
 				207A1FBA2CD812B200ABD615 /* LocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
