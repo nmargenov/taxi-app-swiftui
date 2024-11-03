@@ -24,7 +24,7 @@ struct HomeView: View {
     var body: some View {
         NavigationView{
             VStack {
-                UberMapViewRepresentable(locationManager: locationManager)
+                MapViewRepresentable(locationManager: locationManager)
                     .ignoresSafeArea()
                     .overlay(alignment: .bottom){
                         VStack{
