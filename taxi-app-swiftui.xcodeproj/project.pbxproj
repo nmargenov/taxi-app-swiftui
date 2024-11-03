@@ -51,7 +51,7 @@
 		207A1FA42CD80EEF00ABD615 /* taxi-app-swiftui */ = {
 			isa = PBXGroup;
 			children = (
-				207A1FA52CD80EEF00ABD615 /* taxi_app_swiftuiApp.swift */,
+				207A1FB62CD8122E00ABD615 /* App */,
 				207A1FA72CD80EEF00ABD615 /* ContentView.swift */,
 				207A1FA92CD80EF000ABD615 /* Assets.xcassets */,
 				207A1FAB2CD80EF000ABD615 /* Preview Content */,
@@ -65,6 +65,14 @@
 				207A1FAC2CD80EF000ABD615 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		207A1FB62CD8122E00ABD615 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				207A1FA52CD80EEF00ABD615 /* taxi_app_swiftuiApp.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
