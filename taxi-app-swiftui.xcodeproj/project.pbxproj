@@ -14,6 +14,7 @@
 		207A1FBA2CD812B200ABD615 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207A1FB92CD812B200ABD615 /* LocationManager.swift */; };
 		207A1FBC2CD812FB00ABD615 /* MapViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207A1FBB2CD812FB00ABD615 /* MapViewRepresentable.swift */; };
 		207A1FBE2CD8134D00ABD615 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207A1FBD2CD8134D00ABD615 /* SettingsView.swift */; };
+		207A1FC02CD8136C00ABD615 /* PreviewRideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207A1FBF2CD8136C00ABD615 /* PreviewRideView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		207A1FB92CD812B200ABD615 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		207A1FBB2CD812FB00ABD615 /* MapViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewRepresentable.swift; sourceTree = "<group>"; };
 		207A1FBD2CD8134D00ABD615 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		207A1FBF2CD8136C00ABD615 /* PreviewRideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewRideView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 				207A1FA72CD80EEF00ABD615 /* HomeView.swift */,
 				207A1FBB2CD812FB00ABD615 /* MapViewRepresentable.swift */,
 				207A1FBD2CD8134D00ABD615 /* SettingsView.swift */,
+				207A1FBF2CD8136C00ABD615 /* PreviewRideView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -173,6 +176,7 @@
 				207A1FBE2CD8134D00ABD615 /* SettingsView.swift in Sources */,
 				207A1FA82CD80EEF00ABD615 /* HomeView.swift in Sources */,
 				207A1FA62CD80EEF00ABD615 /* taxi_app_swiftuiApp.swift in Sources */,
+				207A1FC02CD8136C00ABD615 /* PreviewRideView.swift in Sources */,
 				207A1FBC2CD812FB00ABD615 /* MapViewRepresentable.swift in Sources */,
 				207A1FBA2CD812B200ABD615 /* LocationManager.swift in Sources */,
 			);
