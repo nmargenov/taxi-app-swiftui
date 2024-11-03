@@ -16,6 +16,7 @@
 		207A1FBE2CD8134D00ABD615 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207A1FBD2CD8134D00ABD615 /* SettingsView.swift */; };
 		207A1FC02CD8136C00ABD615 /* PreviewRideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207A1FBF2CD8136C00ABD615 /* PreviewRideView.swift */; };
 		207A1FC22CD8138300ABD615 /* CalculatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207A1FC12CD8138300ABD615 /* CalculatorManager.swift */; };
+		207A1FC42CD8139700ABD615 /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207A1FC32CD8139700ABD615 /* TimerManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		207A1FBD2CD8134D00ABD615 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		207A1FBF2CD8136C00ABD615 /* PreviewRideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewRideView.swift; sourceTree = "<group>"; };
 		207A1FC12CD8138300ABD615 /* CalculatorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorManager.swift; sourceTree = "<group>"; };
+		207A1FC32CD8139700ABD615 /* TimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 			children = (
 				207A1FB92CD812B200ABD615 /* LocationManager.swift */,
 				207A1FC12CD8138300ABD615 /* CalculatorManager.swift */,
+				207A1FC32CD8139700ABD615 /* TimerManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -177,6 +180,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				207A1FBE2CD8134D00ABD615 /* SettingsView.swift in Sources */,
+				207A1FC42CD8139700ABD615 /* TimerManager.swift in Sources */,
 				207A1FA82CD80EEF00ABD615 /* HomeView.swift in Sources */,
 				207A1FA62CD80EEF00ABD615 /* taxi_app_swiftuiApp.swift in Sources */,
 				207A1FC02CD8136C00ABD615 /* PreviewRideView.swift in Sources */,
