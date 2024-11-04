@@ -48,7 +48,7 @@ struct LaunchView: View {
     }
     
     func onLoad(){
-        let titleText = "Taxi app"
+        let titleText = K.title
         var charIndex = 0.0
         for letter in titleText {
             Timer.scheduledTimer(withTimeInterval: 0.15 * charIndex, repeats: false) { (timer) in

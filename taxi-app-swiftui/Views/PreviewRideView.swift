@@ -14,8 +14,8 @@ struct PreviewRideView: View {
     let calculator = CalculatorManager()
     let seconds: Int // Time in seconds
     
-    @AppStorage("Language") private var language = "en"
-    @AppStorage("Currency") private var currency = "$"
+    @AppStorage(K.Keys.languageKey) private var language = K.DefaultValue.language
+    @AppStorage(K.Keys.currencyKey) private var currency = K.DefaultValue.currency
     
     init(traveledDistance: Double, seconds: Int) {
         self.traveledDistance = traveledDistance

@@ -18,7 +18,7 @@ struct HomeView: View {
     @State private var traveledDistance: Double = 0.0
     @State private var seconds: Int = 0
     
-    @AppStorage("Language") private var language = "en"
+    @AppStorage(K.Keys.languageKey) private var language = K.DefaultValue.language
     
     let timerManager = TimerManager()
     

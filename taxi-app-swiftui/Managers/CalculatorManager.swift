@@ -9,8 +9,8 @@ import Foundation
 import SwiftUI
 
 class CalculatorManager {
-    @AppStorage("PricePerKm") private var pricePerKm = 2.4
-    @AppStorage("PricePerMinute") private var pricePerMinute = 0.4
+    @AppStorage(K.Keys.kmKey) private var pricePerKm = K.DefaultValue.pricePerKm
+    @AppStorage(K.Keys.minuteKey) private var pricePerMinute = K.DefaultValue.pricePerMin
 
     func calculateKmPrice(meters: Double) -> Double{
         let km = meters / 1000

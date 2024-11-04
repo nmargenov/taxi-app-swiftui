@@ -9,10 +9,10 @@ import SwiftUI
 
 struct SettingsView: View {
     
-    @AppStorage("PricePerKm") private var priceKm = 2.4
-    @AppStorage("PricePerMinute") private var priceMinute = 0.4
-    @AppStorage("Language") private var language = "en"
-    @AppStorage("Currency") private var currency = "$"
+    @AppStorage(K.Keys.kmKey) private var priceKm = K.DefaultValue.pricePerKm
+    @AppStorage(K.Keys.minuteKey) private var priceMinute = K.DefaultValue.pricePerMin
+    @AppStorage(K.Keys.languageKey) private var language = K.DefaultValue.language
+    @AppStorage(K.Keys.currencyKey) private var currency = K.DefaultValue.currency
 
     
     @Environment(\.presentationMode) var presentationMode // To dismiss the view
@@ -25,8 +25,8 @@ struct SettingsView: View {
                     VStack {
                         SettingsCard(title: "pricePerKm".translated(to: language), selection: $priceKm, maxValue: 201)
                         SettingsCard(title: "pricePerMin".translated(to: language), selection: $priceMinute, maxValue: 51)
-                        SettingsCardStrings(title: "language".translated(to: language), selection: $language, array: ["en","bg","de","es","fr","it","ru"])
-                        SettingsCardStrings(title: "currency".translated(to: language), selection: $currency, array: ["$","€","£","лв."])
+                        SettingsCardStrings(title: "language".translated(to: language), selection: $language, array: K.Arrays.languagesArray)
+                        SettingsCardStrings(title: "currency".translated(to: language), selection: $currency, array: K.Arrays.currenciesArray)
                     }
                     
                     .padding()

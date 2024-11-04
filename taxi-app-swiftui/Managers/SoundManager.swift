@@ -12,7 +12,7 @@ class SoundManager{
     static let shared = SoundManager()
     var player: AVAudioPlayer!
     
-    private init() {} // Make the initializer private to enforce singleton
+    private init() {}
 
     func playSound(_ name: String,_ fileType: String) {
         guard let url = Bundle.main.url(forResource: name, withExtension: fileType) else { return }
