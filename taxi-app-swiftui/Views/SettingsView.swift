@@ -11,20 +11,23 @@ struct SettingsView: View {
     
     @AppStorage("PricePerKm") private var priceKm = 2.4
     @AppStorage("PricePerMinute") private var priceMinute = 0.4
+    @AppStorage("Language") private var language = "en"
+    
     @Environment(\.presentationMode) var presentationMode // To dismiss the view
     
     var body: some View {
         NavigationView {
             VStack {
                 VStack {
-                    SettingsCard(title: "Price per km", selection: $priceKm, maxValue: 201)
-                    SettingsCard(title: "Price per minute", selection: $priceMinute, maxValue: 51)
+                    SettingsCard(title: "pricePerKm".translated(to: language), selection: $priceKm, maxValue: 201)
+                    SettingsCard(title: "pricePerMin".translated(to: language), selection: $priceMinute, maxValue: 51)
+                    SettingsCardStrings(title: "language".translated(to: language), selection: $language, array: ["en","bg","de","es","fr","it","ru"])
                 }
                 .padding()
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity) // Make VStack take full screen size
             .background(Color.blue.opacity(0.1)) // Full screen background color
-            .navigationTitle("Settings")
+            .navigationTitle("settings".translated(to: language))
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarItems(
                 leading: Button(action: {
@@ -60,7 +63,7 @@ struct SettingsCard: View {
                     }
                 }
                 .pickerStyle(MenuPickerStyle())
-                .frame(width: 150)
+                .frame(width: 90)
                 .padding()
                 .background(Color(.lightGray))
                 .cornerRadius(10)
@@ -74,6 +77,43 @@ struct SettingsCard: View {
         }
     }
 }
+
+struct SettingsCardStrings: View {
+    var title: String
+    @Binding var selection: String
+    var array: [String]
+
+    var body: some View {
+        VStack {
+            HStack {
+                Text(title)
+                    .font(.headline)
+                    .padding(.bottom, 5)
+                    .foregroundStyle(Color(.white))
+                Spacer()
+
+                Picker("Select language", selection: $selection) {
+                    ForEach(0..<array.count, id: \.self) { index in
+                        let value = array[index]
+                        Text(value).tag(value)
+                    }
+                }
+                .pickerStyle(MenuPickerStyle())
+                .frame(width: 90)
+                .padding()
+                .background(Color(.lightGray))
+                .cornerRadius(10)
+                .shadow(radius: 5)
+            }
+            .padding()
+            .background(Color.blue)
+            .cornerRadius(15)
+            .shadow(radius: 10)
+            
+        }
+    }
+}
+
 
 #Preview {
     SettingsView()

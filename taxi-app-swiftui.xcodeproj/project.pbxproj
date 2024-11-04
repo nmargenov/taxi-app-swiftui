@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		200F9F522CD91B0500C6D2DD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 200F9F502CD91B0500C6D2DD /* Localizable.strings */; };
+		200F9F5A2CD931B900C6D2DD /* extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200F9F592CD931B900C6D2DD /* extentions.swift */; };
 		207A1FA62CD80EEF00ABD615 /* taxi_app_swiftuiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207A1FA52CD80EEF00ABD615 /* taxi_app_swiftuiApp.swift */; };
 		207A1FA82CD80EEF00ABD615 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207A1FA72CD80EEF00ABD615 /* HomeView.swift */; };
 		207A1FAA2CD80EF000ABD615 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 207A1FA92CD80EF000ABD615 /* Assets.xcassets */; };
@@ -20,6 +22,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		200F9F512CD91B0500C6D2DD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		200F9F532CD91B1200C6D2DD /* bg */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = bg; path = bg.lproj/Localizable.strings; sourceTree = "<group>"; };
+		200F9F542CD92F3400C6D2DD /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
+		200F9F552CD92F3900C6D2DD /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		200F9F562CD92F3C00C6D2DD /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		200F9F572CD92F3F00C6D2DD /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		200F9F582CD92F4400C6D2DD /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		200F9F592CD931B900C6D2DD /* extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extentions.swift; sourceTree = "<group>"; };
 		207A1FA22CD80EEF00ABD615 /* taxi-app-swiftui.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "taxi-app-swiftui.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		207A1FA52CD80EEF00ABD615 /* taxi_app_swiftuiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = taxi_app_swiftuiApp.swift; sourceTree = "<group>"; };
 		207A1FA72CD80EEF00ABD615 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -70,6 +80,7 @@
 				207A1FB82CD8128200ABD615 /* Managers */,
 				207A1FA92CD80EF000ABD615 /* Assets.xcassets */,
 				207A1FAB2CD80EF000ABD615 /* Preview Content */,
+				200F9F502CD91B0500C6D2DD /* Localizable.strings */,
 			);
 			path = "taxi-app-swiftui";
 			sourceTree = "<group>";
@@ -86,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				207A1FA52CD80EEF00ABD615 /* taxi_app_swiftuiApp.swift */,
+				200F9F592CD931B900C6D2DD /* extentions.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -153,6 +165,12 @@
 			knownRegions = (
 				en,
 				Base,
+				bg,
+				it,
+				de,
+				es,
+				ru,
+				fr,
 			);
 			mainGroup = 207A1F992CD80EEF00ABD615;
 			productRefGroup = 207A1FA32CD80EEF00ABD615 /* Products */;
@@ -170,6 +188,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				207A1FAD2CD80EF000ABD615 /* Preview Assets.xcassets in Resources */,
+				200F9F522CD91B0500C6D2DD /* Localizable.strings in Resources */,
 				207A1FAA2CD80EF000ABD615 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -184,6 +203,7 @@
 				207A1FBE2CD8134D00ABD615 /* SettingsView.swift in Sources */,
 				207A1FC42CD8139700ABD615 /* TimerManager.swift in Sources */,
 				207A1FA82CD80EEF00ABD615 /* HomeView.swift in Sources */,
+				200F9F5A2CD931B900C6D2DD /* extentions.swift in Sources */,
 				207A1FA62CD80EEF00ABD615 /* taxi_app_swiftuiApp.swift in Sources */,
 				207A1FC02CD8136C00ABD615 /* PreviewRideView.swift in Sources */,
 				207A1FC22CD8138300ABD615 /* CalculatorManager.swift in Sources */,
@@ -193,6 +213,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		200F9F502CD91B0500C6D2DD /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				200F9F512CD91B0500C6D2DD /* en */,
+				200F9F532CD91B1200C6D2DD /* bg */,
+				200F9F542CD92F3400C6D2DD /* it */,
+				200F9F552CD92F3900C6D2DD /* de */,
+				200F9F562CD92F3C00C6D2DD /* es */,
+				200F9F572CD92F3F00C6D2DD /* ru */,
+				200F9F582CD92F4400C6D2DD /* fr */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		207A1FAE2CD80EF000ABD615 /* Debug */ = {

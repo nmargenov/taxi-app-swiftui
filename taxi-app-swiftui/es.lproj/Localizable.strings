@@ -1,0 +1,16 @@
+"settings" = "Ajustes";
+"pricePerKm" = "Precio por km";
+"pricePerMin" = "Precio por minuto";
+"language" = "Idioma";
+"start" = "Iniciar";
+"stop" = "Detener";
+"alert" = "¿Está seguro de que desea finalizar el viaje actual?";
+"yes" = "Sí";
+"no" = "No";
+"totalDistance" = "Distancia total recorrida";
+"priceForDistance" = "Precio por distancia recorrida";
+"timeInUse" = "Tiempo en uso";
+"priceForTime" = "Precio por tiempo";
+"totalPrice" = "Precio total";
+"rideTitle" = "Resumen del viaje";
+"close" = "Cerrar";

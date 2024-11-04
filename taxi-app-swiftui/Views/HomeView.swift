@@ -10,7 +10,6 @@ import MapKit
 
 struct HomeView: View {
     
-    
     @StateObject private var locationManager = LocationManager()
     @State private var showAlert = false
     @State private var isTracking = false
@@ -18,6 +17,8 @@ struct HomeView: View {
     
     @State private var traveledDistance: Double = 0.0
     @State private var seconds: Int = 0
+    
+    @AppStorage("Language") private var language = "en"
     
     let timerManager = TimerManager()
     
@@ -31,16 +32,14 @@ struct HomeView: View {
                             HStack{
                                 VStack{
                                     if !isTracking{
-                                        ActionButton(locationManager: locationManager,text: "Start", color: .blue, isTracking: $isTracking, showAlert: $showAlert, timerManager: timerManager)
+                                        ActionButton(locationManager: locationManager,text: "start".translated(to: language), color: .blue, isTracking: $isTracking, showAlert: $showAlert, timerManager: timerManager, name: "Start")
                                     }else {
-                                        ActionButton(locationManager: locationManager,text: "Stop", color: .red,  isTracking: $isTracking, showAlert: $showAlert,timerManager: timerManager)
+                                        ActionButton(locationManager: locationManager,text: "stop".translated(to: language), color: .red,  isTracking: $isTracking, showAlert: $showAlert,timerManager: timerManager, name: "Stop")
                                     }
                                 }
                                 
                             }
-                            Text("Distance traveled: \(locationManager.distanceTraveled, specifier: "%.2f") meters")
-                                .padding(0)
-                                .padding(.bottom, 15)
+                                .padding(.bottom, 10)
                         }.frame(maxWidth: .infinity)
                             .background(Color.gray.opacity(0.5))
                             .overlay{
@@ -54,16 +53,16 @@ struct HomeView: View {
                                             }
                                         }
                                     }.padding(.trailing,20)
-                                        .padding(.bottom, 20)
+                                        .padding(.bottom, 5)
                                 }
                             }
                     }.padding(.bottom, 1)
                     .ignoresSafeArea()
-                    .alert("Are you sure you want to finish the current ride?", isPresented: $showAlert) {
-                        Button("No"){
+                    .alert("alert".translated(to: language), isPresented: $showAlert) {
+                        Button("no".translated(to: language)){
                             showAlert = false;
                         }
-                        Button("Yes"){
+                        Button("yes".translated(to: language)){
                             traveledDistance = locationManager.distanceTraveled
                             locationManager.stopUpdatingLocation()
                             showAlert = false;
@@ -94,12 +93,13 @@ struct ActionButton: View {
     @Binding var isTracking: Bool;
     @Binding var showAlert: Bool
     let timerManager: TimerManager
+    let name: String
     
     var body: some View {
         Button {
-            if text == "Stop"{
+            if name == "Stop"{
                 showAlert = true
-            }else if text == "Start"{
+            }else if name == "Start"{
                 locationManager.startUpdatingLocation()
                 isTracking = true;
                 timerManager.start()

@@ -14,6 +14,8 @@ struct PreviewRideView: View {
     let calculator = CalculatorManager()
     let seconds: Int // Time in seconds
     
+    @AppStorage("Language") private var language = "en"
+    
     init(traveledDistance: Double, seconds: Int) {
         self.traveledDistance = traveledDistance
         self.seconds = seconds
@@ -34,30 +36,31 @@ struct PreviewRideView: View {
                         .cornerRadius(2.5)
                         .padding(.top, 10)
                     
-                    Text("Ride Summary")
+                    Text("rideTitle".translated(to: language))
                         .font(.largeTitle)
                         .fontWeight(.bold)
+                        .multilineTextAlignment(.center)
                         .padding()
                     
                     // Total distance card
-                    SummaryCard(title: "Total Distance Traveled", value: String(format: "%.2f km", traveledDistance / 1000))
+                    SummaryCard(title: "totalDistance".translated(to: language), value: String(format: "%.2f km", traveledDistance / 1000))
                     
                     // Price for distance card
-                    SummaryCard(title: "Price for Distance Traveled", value: "$\(returnStringKmPrice())")
+                    SummaryCard(title: "priceForDistance".translated(to: language), value: "$\(returnStringKmPrice())")
                     
                     // Seconds in use card formatted as minutes:seconds
-                    SummaryCard(title: "Time in Use", value: formatTime(seconds))
+                    SummaryCard(title: "timeInUse".translated(to: language), value: formatTime(seconds))
                     
                     // Price for seconds card
-                    SummaryCard(title: "Price for Time", value: "$\(returnStringTimePrice())")
+                    SummaryCard(title: "priceForTime".translated(to: language), value: "$\(returnStringTimePrice())")
                     
                     // Final total price card
-                    SummaryCard(title: "Total Price", value: "$\(finalTotalPrice())")
+                    SummaryCard(title: "totalPrice".translated(to: language), value: "$\(finalTotalPrice())")
                     
                     Spacer()
                     
                     // Close button
-                    Button("Close") {
+                    Button("close".translated(to: language)) {
                         dismiss()
                     }
                     .padding()
