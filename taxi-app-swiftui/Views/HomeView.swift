@@ -23,10 +23,9 @@ struct HomeView: View {
     let timerManager = TimerManager()
     
     var body: some View {
-        NavigationView{
+        NavigationStack{
             VStack {
                 MapViewRepresentable(locationManager: locationManager)
-                    .ignoresSafeArea()
                     .overlay(alignment: .bottom){
                         VStack{
                             HStack{
@@ -39,7 +38,7 @@ struct HomeView: View {
                                 }
                                 
                             }
-                                .padding(.bottom, 10)
+                            .padding(.bottom, 10)
                         }.frame(maxWidth: .infinity)
                             .background(Color.gray.opacity(0.5))
                             .overlay{
@@ -72,7 +71,6 @@ struct HomeView: View {
                         }
                     }
             }
-            
         }
         .sheet(isPresented: $showDetailView) {
             PreviewRideView(traveledDistance: traveledDistance, seconds: seconds)

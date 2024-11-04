@@ -16,7 +16,7 @@ struct SettingsView: View {
     @Environment(\.presentationMode) var presentationMode // To dismiss the view
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             VStack {
                 VStack {
                     SettingsCard(title: "pricePerKm".translated(to: language), selection: $priceKm, maxValue: 201)

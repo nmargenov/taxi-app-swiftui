@@ -27,49 +27,50 @@ struct PreviewRideView: View {
                 // Background color
                 Color.blue.opacity(0.1)
                     .edgesIgnoringSafeArea(.all)
-                
-                VStack(spacing: 20) {
-                    // Swipe down handle
-                    Rectangle()
-                        .frame(width: 40, height: 5)
-                        .foregroundColor(Color.gray.opacity(0.6))
-                        .cornerRadius(2.5)
-                        .padding(.top, 10)
-                    
-                    Text("rideTitle".translated(to: language))
-                        .font(.largeTitle)
-                        .fontWeight(.bold)
-                        .multilineTextAlignment(.center)
+                ScrollView{
+                    VStack(spacing: 20) {
+                        // Swipe down handle
+                        Rectangle()
+                            .frame(width: 40, height: 5)
+                            .foregroundColor(Color.gray.opacity(0.6))
+                            .cornerRadius(2.5)
+                            .padding(.top, 10)
+                        
+                        Text("rideTitle".translated(to: language))
+                            .font(.largeTitle)
+                            .fontWeight(.bold)
+                            .multilineTextAlignment(.center)
+                            .padding()
+                        
+                        // Total distance card
+                        SummaryCard(title: "totalDistance".translated(to: language), value: String(format: "%.2f km", traveledDistance / 1000))
+                        
+                        // Price for distance card
+                        SummaryCard(title: "priceForDistance".translated(to: language), value: "$\(returnStringKmPrice())")
+                        
+                        // Seconds in use card formatted as minutes:seconds
+                        SummaryCard(title: "timeInUse".translated(to: language), value: formatTime(seconds))
+                        
+                        // Price for seconds card
+                        SummaryCard(title: "priceForTime".translated(to: language), value: "$\(returnStringTimePrice())")
+                        
+                        // Final total price card
+                        SummaryCard(title: "totalPrice".translated(to: language), value: "$\(finalTotalPrice())")
+                        
+                        Spacer()
+                        
+                        // Close button
+                        Button("close".translated(to: language)) {
+                            dismiss()
+                        }
                         .padding()
-                    
-                    // Total distance card
-                    SummaryCard(title: "totalDistance".translated(to: language), value: String(format: "%.2f km", traveledDistance / 1000))
-                    
-                    // Price for distance card
-                    SummaryCard(title: "priceForDistance".translated(to: language), value: "$\(returnStringKmPrice())")
-                    
-                    // Seconds in use card formatted as minutes:seconds
-                    SummaryCard(title: "timeInUse".translated(to: language), value: formatTime(seconds))
-                    
-                    // Price for seconds card
-                    SummaryCard(title: "priceForTime".translated(to: language), value: "$\(returnStringTimePrice())")
-                    
-                    // Final total price card
-                    SummaryCard(title: "totalPrice".translated(to: language), value: "$\(finalTotalPrice())")
-                    
-                    Spacer()
-                    
-                    // Close button
-                    Button("close".translated(to: language)) {
-                        dismiss()
+                        .background(Color.red)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                        .font(.headline)
                     }
                     .padding()
-                    .background(Color.red)
-                    .foregroundColor(.white)
-                    .cornerRadius(10)
-                    .font(.headline)
                 }
-                .padding()
             }
             .navigationBarTitleDisplayMode(.inline)
         }
