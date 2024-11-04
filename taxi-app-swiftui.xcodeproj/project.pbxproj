@@ -12,6 +12,9 @@
 		200F9F5C2CD947BF00C6D2DD /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 200F9F5B2CD947BF00C6D2DD /* Launch Screen.storyboard */; };
 		200F9F5E2CD9481F00C6D2DD /* LaunchScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200F9F5D2CD9481F00C6D2DD /* LaunchScreenController.swift */; };
 		200F9F612CD94B8600C6D2DD /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200F9F602CD94B8600C6D2DD /* LaunchView.swift */; };
+		200F9F642CD958E100C6D2DD /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200F9F632CD958E100C6D2DD /* SoundManager.swift */; };
+		200F9F6C2CD9622000C6D2DD /* Start.wav in Resources */ = {isa = PBXBuildFile; fileRef = 200F9F6A2CD9622000C6D2DD /* Start.wav */; };
+		200F9F6D2CD9622100C6D2DD /* Stop.wav in Resources */ = {isa = PBXBuildFile; fileRef = 200F9F6B2CD9622000C6D2DD /* Stop.wav */; };
 		207A1FA62CD80EEF00ABD615 /* taxi_app_swiftuiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207A1FA52CD80EEF00ABD615 /* taxi_app_swiftuiApp.swift */; };
 		207A1FA82CD80EEF00ABD615 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207A1FA72CD80EEF00ABD615 /* HomeView.swift */; };
 		207A1FAA2CD80EF000ABD615 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 207A1FA92CD80EF000ABD615 /* Assets.xcassets */; };
@@ -36,6 +39,9 @@
 		200F9F5B2CD947BF00C6D2DD /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		200F9F5D2CD9481F00C6D2DD /* LaunchScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenController.swift; sourceTree = "<group>"; };
 		200F9F602CD94B8600C6D2DD /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
+		200F9F632CD958E100C6D2DD /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
+		200F9F6A2CD9622000C6D2DD /* Start.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Start.wav; sourceTree = "<group>"; };
+		200F9F6B2CD9622000C6D2DD /* Stop.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Stop.wav; sourceTree = "<group>"; };
 		207A1FA22CD80EEF00ABD615 /* taxi-app-swiftui.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "taxi-app-swiftui.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		207A1FA52CD80EEF00ABD615 /* taxi_app_swiftuiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = taxi_app_swiftuiApp.swift; sourceTree = "<group>"; };
 		207A1FA72CD80EEF00ABD615 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -69,6 +75,15 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		200F9F652CD959C300C6D2DD /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				200F9F6A2CD9622000C6D2DD /* Start.wav */,
+				200F9F6B2CD9622000C6D2DD /* Stop.wav */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
 		207A1F992CD80EEF00ABD615 = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +109,7 @@
 				200F9F5F2CD9482900C6D2DD /* Controllers */,
 				207A1FB82CD8128200ABD615 /* Managers */,
 				207A1FA92CD80EF000ABD615 /* Assets.xcassets */,
+				200F9F652CD959C300C6D2DD /* Sounds */,
 				207A1FAB2CD80EF000ABD615 /* Preview Content */,
 				200F9F502CD91B0500C6D2DD /* Localizable.strings */,
 			);
@@ -134,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				207A1FB92CD812B200ABD615 /* LocationManager.swift */,
+				200F9F632CD958E100C6D2DD /* SoundManager.swift */,
 				207A1FC12CD8138300ABD615 /* CalculatorManager.swift */,
 				207A1FC32CD8139700ABD615 /* TimerManager.swift */,
 			);
@@ -204,8 +221,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				200F9F6D2CD9622100C6D2DD /* Stop.wav in Resources */,
 				207A1FAD2CD80EF000ABD615 /* Preview Assets.xcassets in Resources */,
 				200F9F522CD91B0500C6D2DD /* Localizable.strings in Resources */,
+				200F9F6C2CD9622000C6D2DD /* Start.wav in Resources */,
 				200F9F5C2CD947BF00C6D2DD /* Launch Screen.storyboard in Resources */,
 				207A1FAA2CD80EF000ABD615 /* Assets.xcassets in Resources */,
 			);
@@ -223,6 +242,7 @@
 				207A1FC42CD8139700ABD615 /* TimerManager.swift in Sources */,
 				200F9F5E2CD9481F00C6D2DD /* LaunchScreenController.swift in Sources */,
 				207A1FA82CD80EEF00ABD615 /* HomeView.swift in Sources */,
+				200F9F642CD958E100C6D2DD /* SoundManager.swift in Sources */,
 				200F9F5A2CD931B900C6D2DD /* extentions.swift in Sources */,
 				207A1FA62CD80EEF00ABD615 /* taxi_app_swiftuiApp.swift in Sources */,
 				207A1FC02CD8136C00ABD615 /* PreviewRideView.swift in Sources */,

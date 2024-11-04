@@ -62,6 +62,7 @@ struct HomeView: View {
                             showAlert = false;
                         }
                         Button("yes".translated(to: language)){
+                            SoundManager.shared.playSound("Stop", "wav")
                             traveledDistance = locationManager.distanceTraveled
                             locationManager.stopUpdatingLocation()
                             showAlert = false;
@@ -92,13 +93,14 @@ struct ActionButton: View {
     @Binding var showAlert: Bool
     let timerManager: TimerManager
     let name: String
-    
+        
     var body: some View {
         Button {
             if name == "Stop"{
                 showAlert = true
             }else if name == "Start"{
                 locationManager.startUpdatingLocation()
+                SoundManager.shared.playSound("Start", "wav")
                 isTracking = true;
                 timerManager.start()
             }
