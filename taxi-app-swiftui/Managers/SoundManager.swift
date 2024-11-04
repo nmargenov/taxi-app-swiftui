@@ -15,14 +15,20 @@ class SoundManager{
     private init() {} // Make the initializer private to enforce singleton
 
     func playSound(_ name: String,_ fileType: String) {
-        if let url = Bundle.main.url(forResource: name, withExtension: fileType){
-            do {
-                player = try AVAudioPlayer(contentsOf: url)
-                player?.play()
-                
-            } catch let error {
-                print(error.localizedDescription)
-            }
+        guard let url = Bundle.main.url(forResource: name, withExtension: fileType) else { return }
+
+        do {
+            try AVAudioSession.sharedInstance().setCategory(.ambient, mode: .default)
+            try AVAudioSession.sharedInstance().setActive(true)
+
+            player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.mp3.rawValue)
+
+            guard let player = player else { return }
+
+            player.play()
+
+        } catch let error {
+            print(error.localizedDescription)
         }
     }
 }
