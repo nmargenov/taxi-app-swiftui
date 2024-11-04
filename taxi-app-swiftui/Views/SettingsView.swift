@@ -12,22 +12,28 @@ struct SettingsView: View {
     @AppStorage("PricePerKm") private var priceKm = 2.4
     @AppStorage("PricePerMinute") private var priceMinute = 0.4
     @AppStorage("Language") private var language = "en"
+    @AppStorage("Currency") private var currency = "$"
+
     
     @Environment(\.presentationMode) var presentationMode // To dismiss the view
     
     var body: some View {
         NavigationStack {
-            VStack {
-                VStack {
-                    SettingsCard(title: "pricePerKm".translated(to: language), selection: $priceKm, maxValue: 201)
-                    SettingsCard(title: "pricePerMin".translated(to: language), selection: $priceMinute, maxValue: 51)
-                    SettingsCardStrings(title: "language".translated(to: language), selection: $language, array: ["en","bg","de","es","fr","it","ru"])
+            ScrollView {
+                ZStack{
+                    Spacer().containerRelativeFrame([.vertical])
+                    VStack {
+                        SettingsCard(title: "pricePerKm".translated(to: language), selection: $priceKm, maxValue: 201)
+                        SettingsCard(title: "pricePerMin".translated(to: language), selection: $priceMinute, maxValue: 51)
+                        SettingsCardStrings(title: "language".translated(to: language), selection: $language, array: ["en","bg","de","es","fr","it","ru"])
+                        SettingsCardStrings(title: "currency".translated(to: language), selection: $currency, array: ["$","€","£","лв."])
+                    }
+                    
+                    .padding()
                 }
-                .padding()
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity) // Make VStack take full screen size
-            .background(Color.blue.opacity(0.1)) // Full screen background color
-            .navigationTitle("settings".translated(to: language))
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(Color.blue.opacity(0.2))           .navigationTitle("settings".translated(to: language))
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarItems(
                 leading: Button(action: {
@@ -38,6 +44,7 @@ struct SettingsView: View {
                 }
             )
         }.navigationBarBackButtonHidden()
+            .scrollBounceBehavior(.basedOnSize)
     }
 }
 

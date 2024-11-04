@@ -15,6 +15,7 @@ struct PreviewRideView: View {
     let seconds: Int // Time in seconds
     
     @AppStorage("Language") private var language = "en"
+    @AppStorage("Currency") private var currency = "$"
     
     init(traveledDistance: Double, seconds: Int) {
         self.traveledDistance = traveledDistance
@@ -25,7 +26,7 @@ struct PreviewRideView: View {
         NavigationStack {
             ZStack {
                 // Background color
-                Color.blue.opacity(0.1)
+                Color.blue.opacity(0.2)
                     .edgesIgnoringSafeArea(.all)
                 ScrollView{
                     VStack(spacing: 20) {
@@ -46,16 +47,16 @@ struct PreviewRideView: View {
                         SummaryCard(title: "totalDistance".translated(to: language), value: String(format: "%.2f km", traveledDistance / 1000))
                         
                         // Price for distance card
-                        SummaryCard(title: "priceForDistance".translated(to: language), value: "$\(returnStringKmPrice())")
+                        SummaryCard(title: "priceForDistance".translated(to: language), value: "\(returnStringKmPrice())\(currency)")
                         
                         // Seconds in use card formatted as minutes:seconds
                         SummaryCard(title: "timeInUse".translated(to: language), value: formatTime(seconds))
                         
                         // Price for seconds card
-                        SummaryCard(title: "priceForTime".translated(to: language), value: "$\(returnStringTimePrice())")
+                        SummaryCard(title: "priceForTime".translated(to: language), value: "\(returnStringTimePrice())\(currency)")
                         
                         // Final total price card
-                        SummaryCard(title: "totalPrice".translated(to: language), value: "$\(finalTotalPrice())")
+                        SummaryCard(title: "totalPrice".translated(to: language), value: "\(finalTotalPrice())\(currency)")
                         
                         Spacer()
                         
