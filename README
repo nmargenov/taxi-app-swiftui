@@ -22,17 +22,6 @@ Ride Cost Tracker is a SwiftUI-based iOS app that tracks your movement on a map,
   - Choose app **Language** (English, Bulgarian, German, Spanish, French, Italian, Russian)  
   - Choose **Currency** (лв., $, €, £)  
 
-## Screenshots
-
-![Home Screen](assets/homescreen.png)  
-**Home Screen**
-
-![Ride Summary Screen](assets/ridesummary.png)  
-**Ride Summary Screen**
-
-![Settings Screen](assets/settings.png)  
-**Settings Screen**
-
 ## Technologies Used
 
 - SwiftUI  
