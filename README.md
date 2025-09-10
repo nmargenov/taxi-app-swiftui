@@ -29,6 +29,23 @@ Ride Cost Tracker is a SwiftUI-based iOS app that tracks your movement on a map,
 - CoreLocation for distance calculation  
 - MVVM architecture for clean code structure  
 
+## Screenshots
+
+<figure>
+  <img src="assets/homescreen.png" alt="Home Screen" width="300"/>
+  <figcaption>Home Screen</figcaption>
+</figure>
+
+<figure>
+  <img src="assets/ridesummary.png" alt="Ride Summary" width="300"/>
+  <figcaption>Ride Summary</figcaption>
+</figure>
+
+<figure>
+  <img src="assets/settings.png" alt="Settings" width="300"/>
+  <figcaption>Settings</figcaption>
+</figure>
+
 ## Installation
 
 1. Open the project in Xcode (version 14 or later recommended).  
