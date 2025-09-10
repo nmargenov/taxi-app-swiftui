@@ -1,0 +1,65 @@
+# Ride Cost Tracker - SwiftUI App
+
+Ride Cost Tracker is a SwiftUI-based iOS app that tracks your movement on a map, calculates the distance traveled, and computes the total cost of your ride based on distance and time. The app is designed for simplicity, multi-language support, and flexible pricing options.
+
+## Features
+
+- **Real-time Location Tracking:** Follows your movement on the map while the ride is in progress.  
+- **Distance & Time Calculation:** Tracks distance traveled (km) and ride duration.  
+- **Dynamic Pricing:** Calculates the ride price using configurable:
+  - Price per kilometer  
+  - Price per minute  
+
+- **Ride Summary Screen:** Displays detailed ride information:
+  - Total Distance Traveled  
+  - Price for Distance Traveled  
+  - Time in Use  
+  - Price for Time  
+  - Total Price  
+
+- **Settings:**
+  - Set **Price per km** and **Price per Minute**  
+  - Choose app **Language** (English, Bulgarian, German, Spanish, French, Italian, Russian)  
+  - Choose **Currency** (лв., $, €, £)  
+
+## Screenshots
+
+<figure>
+    <img src="assets/homescreen.png" alt="Home Screen" width=300/>
+    <figcaption>Home Screen</figcaption>
+</figure>
+
+<figure>
+    <img src="assets/ridesummary.png" alt="Ride Summary Screen" width=300/>
+    <figcaption>Ride Summary Screen</figcaption>
+</figure>
+
+<figure>
+    <img src="assets/settings.png" alt="Settings Screen" width=300/>
+    <figcaption>Settings Screen</figcaption>
+</figure>
+
+## Technologies Used
+
+- SwiftUI  
+- MapKit for real-time location tracking  
+- CoreLocation for distance calculation  
+- MVVM architecture for clean code structure  
+
+## Installation
+
+1. Open the project in Xcode (version 14 or later recommended).  
+2. Connect a real device or use the simulator.  
+3. Build and run the app.
+
+## Usage
+
+1. Open the app and allow location access.  
+2. Start a ride – your location will be tracked on the map in real-time.  
+3. End the ride to see the ride summary, including:
+   - Total Distance Traveled  
+   - Price for Distance Traveled  
+   - Time in Use  
+   - Price for Time  
+   - Total Price  
+4. Customize pricing, language, and currency in the Settings screen as needed.
